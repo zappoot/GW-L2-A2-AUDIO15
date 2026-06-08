@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's free time – Audio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #b3e0ff 0%, #f9c7e0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .player-card {
+            max-width: 760px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(2px);
+            border-radius: 56px;
+            padding: 28px 30px 32px 30px;
+            box-shadow: 0 25px 45px rgba(0, 30, 50, 0.25);
+            border: 1px solid rgba(255, 215, 235, 0.6);
+        }
+
+        .hero {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .cover {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 36px;
+            box-shadow: 0 20px 30px -8px rgba(0, 80, 120, 0.3);
+            border: 3px solid #ffb3d1;
+            flex-shrink: 0;
+        }
+
+        .description {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .badge {
+            background: #cfe6ff;
+            display: inline-block;
+            padding: 5px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #0e6b9e;
+            letter-spacing: 0.3px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(125deg, #0f5b8c, #c43b7a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 6px;
+        }
+
+        .sub {
+            font-size: 0.85rem;
+            color: #2c5a7a;
+            font-weight: 500;
+            margin-bottom: 16px;
+            border-left: 3px solid #f28bc0;
+            padding-left: 12px;
+        }
+
+        audio {
+            width: 100%;
+            border-radius: 48px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: #d9ecff;
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: #f49bc1;
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #1f6392;
+            font-weight: 500;
+        }
+
+        @media (max-width: 560px) {
+            .player-card {
+                padding: 20px;
+            }
+            .hero {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .sub {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="player-card">
+    <div class="hero">
+        <img class="cover" src="15.jpg" alt="Free time activities">
+        <div class="description">
+            <div class="badge">🎧 LISTEN & LEARN</div>
+            <h2>Sam's free time</h2>
+            <div class="sub">What Sam and his friends like doing in their free time</div>
+            <audio controls>
+                <source src="A2_Student_s_Book_track15.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</div>
+</body>
+</html>
